@@ -70,6 +70,7 @@ class _HomePageState extends State<HomeScreen> {
         body: Container(
           width: MediaQuery.of(context).size.width,
           decoration: BoxDecoration(gradient: Styles.g1),
+          padding: EdgeInsets.all(10),
           child: Column(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
@@ -184,7 +185,11 @@ class TrueTag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      Container(height: 15, width: 15, color: Colors.green),
+      Container(
+          height: 15,
+          width: 15,
+          child: const Icon(Icons.check_box_outlined, color: Colors.green,),
+          ),
       const SizedBox(
         width: 10,
       )
@@ -198,7 +203,7 @@ class FalseTag extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Row(children: [
-      Container(height: 15, width: 15, color: Colors.red),
+      Container(height: 15, width: 15, child:Icon(Icons.disabled_by_default_outlined, color:Colors.red)),
       SizedBox(
         width: 10,
       )
